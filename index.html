@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Goticismo medieval</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500&family=Public+Sans:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#17181c;--ink2:#1e2029;--gold:#e3a93a;--paper:#f0ece4;--muted:#b9b9bd;--dim:#9a9aa0}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{height:100%;overflow:hidden;background:var(--ink);font-family:'Public Sans',system-ui,sans-serif;color:var(--muted)}
+.slide{position:fixed;inset:0;background:var(--ink);opacity:0;visibility:hidden;transform:translateX(70px);
+  transition:opacity .7s ease,transform .7s ease,visibility 0s .7s}
+.slide.alt{background:var(--ink2)}
+.slide.goldbg{background:var(--gold)}
+.slide.before{transform:translateX(-70px)}
+.slide.active{opacity:1;visibility:visible;transform:none;transition:opacity .7s ease,transform .7s ease}
+.inner{position:absolute;left:50%;top:50%;width:1080px;height:600px;transform:translate(-50%,-50%) scale(var(--s,1))}
+.a{opacity:0;transform:translateY(20px);transition:opacity .8s ease,transform .8s ease}
+.active .a{opacity:1;transform:none;transition-delay:calc(var(--i)*.13s + .3s)}
+.abs{position:absolute}
+h1,h2{font-family:'EB Garamond',Georgia,serif;font-weight:500;color:var(--paper);line-height:1.05}
+h1{font-size:84px}
+h2{font-size:42px;line-height:1.12}
+.sub{font-size:21px}
+.txt{font-size:23px;line-height:1.45;color:var(--muted)}
+.small{font-size:17px;line-height:1.45;color:var(--dim)}
+.g{color:var(--gold)}
+.big{font-family:'EB Garamond',serif;font-size:60px;color:var(--gold);line-height:1}
+/* controles */
+#ui{position:fixed;left:0;right:0;bottom:0;height:3px;background:rgba(255,255,255,.08);z-index:5}
+#bar{height:100%;width:0;background:var(--gold);transition:width .5s}
+.nav{position:fixed;bottom:18px;z-index:6;display:flex;gap:10px;align-items:center;transition:opacity .4s}
+.nav button{width:48px;height:48px;border-radius:50%;border:1px solid rgba(227,169,58,.6);background:rgba(23,24,28,.75);
+  color:var(--gold);font-size:22px;cursor:pointer;transition:background .2s,transform .2s}
+.nav button:hover{background:var(--gold);color:var(--ink);transform:scale(1.08)}
+.nav button:disabled{opacity:.25;pointer-events:none}
+#left{left:18px}#right{right:18px}
+#count{position:fixed;left:50%;transform:translateX(-50%);bottom:26px;z-index:6;font-size:14px;color:var(--dim);transition:opacity .4s;
+  background:rgba(23,24,28,.6);padding:2px 10px;border-radius:10px}
+body.idle .nav,body.idle #count{opacity:0}
+body.idle{cursor:none}
+</style>
+</head>
+<body>
+
+<!-- 1 -->
+<section class="slide">
+ <div class="inner">
+  <h1 class="abs a" style="left:72px;top:176px;width:520px">Goticismo<br>medieval</h1>
+  <p class="abs a sub" style="left:72px;top:376px;color:var(--muted)">Uma época inteira, e não só as catedrais.</p>
+  <svg class="abs a" style="left:786px;top:146px" width="208" height="298" viewBox="0 0 208 298" fill="none">
+   <path d="M2 296V160C2 92 52 36 104 2C156 36 206 92 206 160V296" stroke="#e3a93a" stroke-width="2"/>
+   <path d="M22 296V170C22 108 62 62 104 36C146 62 186 108 186 170V296" stroke="#6b5530" stroke-width="2"/>
+  </svg>
+ </div>
+</section>
+
+<!-- 2 -->
+<section class="slide alt">
+ <div class="inner">
+  <h2 class="abs a" style="left:72px;top:68px">O que foi o gótico, além das catedrais?</h2>
+  <p class="abs a txt" style="left:72px;top:462px;width:640px;font-size:22px">Um período em que a Europa refez a arquitetura, a imagem, o pensamento e a língua em que se escrevia.</p>
+ </div>
+</section>
+
+<!-- 3 -->
+<section class="slide goldbg">
+ <div class="inner">
+  <h1 class="abs a" style="left:72px;top:70px;font-size:104px;color:var(--ink);white-space:nowrap">c. 1140 a 1500</h1>
+  <p class="abs a" style="left:72px;top:472px;width:640px;font-size:20px;line-height:1.45;color:var(--ink)">Começa na França, perto de Paris, e se espalha pela Europa. Cada país entra e sai do gótico em datas diferentes.</p>
+ </div>
+</section>
+
+<!-- 4 -->
+<section class="slide">
+ <div class="inner">
+  <h2 class="abs a" style="left:72px;top:68px">O gótico é arte de cidade</h2>
+  <p class="abs a txt" style="left:72px;top:432px;width:520px;font-size:24px">O comércio fez as cidades crescerem, e com elas vieram as primeiras universidades, como Bolonha e Paris.</p>
+  <p class="abs a small" style="left:682px;top:460px;width:340px">Notre-Dame de Paris levou quase dois séculos para ficar pronta. Quem começou a obra não viu o fim.</p>
+ </div>
+</section>
+
+<!-- 5 -->
+<section class="slide alt">
+ <div class="inner">
+  <h2 class="abs a" style="left:72px;top:68px;width:800px">Na arquitetura, o peso foi para fora e a parede virou janela</h2>
+  <svg class="abs a" style="left:80px;top:340px" width="190" height="150" viewBox="0 0 190 150" fill="none">
+   <path d="M4 147V90A87 87 0 0 1 178 90V147" stroke="#a9a9ae" stroke-width="2.5" transform="translate(0,6)"/>
+  </svg>
+  <p class="abs a small" style="left:72px;top:508px">Arco redondo</p>
+  <svg class="abs a" style="left:372px;top:276px" width="190" height="216" viewBox="0 0 190 216" fill="none">
+   <path d="M4 212V120C4 80 60 40 94 4C128 40 184 80 184 120V212" stroke="#e3a93a" stroke-width="2.5"/>
+  </svg>
+  <p class="abs a small" style="left:365px;top:508px">Arco ogival</p>
+  <div class="abs" style="left:657px;top:296px;width:360px;font-size:18px;line-height:1.4;color:var(--muted)">
+   <p class="a" style="margin-bottom:16px"><span class="g">Arco ogival:</span> sobe mais e empurra menos para os lados.</p>
+   <p class="a" style="margin-bottom:16px"><span class="g">Abóbada de nervuras:</span> o esqueleto de pedra do teto.</p>
+   <p class="a" style="margin-bottom:16px"><span class="g">Arcobotante:</span> o apoio que segura tudo por fora.</p>
+   <p class="a"><span class="g">Vitral:</span> vidro colorido onde antes havia parede.</p>
+  </div>
+ </div>
+</section>
+
+<!-- 6 -->
+<section class="slide">
+ <div class="inner">
+  <h1 class="abs a" style="left:72px;top:64px;font-size:54px;width:520px">Nos portais, a pedra ganhou corpo</h1>
+  <div class="abs" style="left:581px;top:388px;width:440px;font-size:20px;line-height:1.5;color:var(--muted)">
+   <p class="a" style="margin-bottom:22px">Em Chartres, por volta de 1145, as figuras são longas e coladas às colunas.</p>
+   <p class="a">No século XIII, em Reims, elas já têm gesto, peso e rosto.</p>
+  </div>
+ </div>
+</section>
+
+<!-- 7 -->
+<section class="slide alt">
+ <div class="inner">
+  <svg class="abs a" style="left:86px;top:86px" width="176" height="366" viewBox="0 0 176 366">
+   <defs><clipPath id="arch"><path d="M2 364V150C2 82 50 32 88 2C126 32 174 82 174 150V364Z"/></clipPath></defs>
+   <g clip-path="url(#arch)">
+    <rect width="176" height="366" fill="#2a4070"/>
+    <g>
+     <rect x="2" y="148" width="57" height="54" fill="#4272b8"/><rect x="59" y="148" width="57" height="54" fill="#b94730"/><rect x="116" y="148" width="58" height="54" fill="#e3a93a"/>
+     <rect x="2" y="202" width="57" height="54" fill="#b94730"/><rect x="59" y="202" width="57" height="54" fill="#e3a93a"/><rect x="116" y="202" width="58" height="54" fill="#4272b8"/>
+     <rect x="2" y="256" width="57" height="54" fill="#e3a93a"/><rect x="59" y="256" width="57" height="54" fill="#4272b8"/><rect x="116" y="256" width="58" height="54" fill="#b94730"/>
+     <rect x="2" y="310" width="57" height="54" fill="#4272b8"/><rect x="59" y="310" width="57" height="54" fill="#b94730"/><rect x="116" y="310" width="58" height="54" fill="#e3a93a"/>
+    </g>
+    <rect x="57" y="20" width="4" height="346" fill="#17181c"/><rect x="115" y="20" width="4" height="346" fill="#17181c"/>
+   </g>
+   <path d="M2 364V150C2 82 50 32 88 2C126 32 174 82 174 150V364Z" fill="none" stroke="#e3a93a" stroke-width="3"/>
+  </svg>
+  <h2 class="abs a" style="left:365px;top:68px;width:560px">A cor passou da parede para o vidro e o pergaminho</h2>
+  <p class="abs a txt" style="left:365px;top:370px;width:560px;font-size:19px">Os vitrais contam cenas da Bíblia e vidas de santos. Nos livros de horas, a pintura encolhe para caber na página, como nas Très Riches Heures, do início do século XV.</p>
+ </div>
+</section>
+
+<!-- 8 -->
+<section class="slide">
+ <div class="inner">
+  <h2 class="abs a" style="left:72px;top:60px;width:800px">Nas universidades, a fé passou a ser discutida com lógica</h2>
+  <p class="abs a txt" style="left:72px;top:430px;width:500px;font-size:22px">Tomás de Aquino, em meados do século XIII, montou a teologia na Suma Teológica: pergunta por pergunta, objeção por objeção.</p>
+  <p class="abs a small" style="left:648px;top:452px;width:340px;font-size:16px">O historiador Erwin Panofsky viu aí um paralelo com a catedral, tudo dividido e encaixado. A tese ainda é debatida.</p>
+ </div>
+</section>
+
+<!-- 9 -->
+<section class="slide alt">
+ <div class="inner">
+  <h2 class="abs a" style="left:72px;top:68px;width:380px">Dante e Chaucer escreveram na língua do povo</h2>
+  <div class="abs" style="left:522px;top:192px;width:490px">
+   <p class="a txt" style="font-size:21px;margin-bottom:30px"><span class="g">Dante</span> concluiu a Divina Comédia em italiano por volta de 1320. <span class="g">Chaucer</span> escreveu os Contos de Canterbury em inglês, no fim do século XIV.</p>
+   <p class="a small" style="font-size:18px;width:460px">Em Paris, a escola de Notre-Dame criou a polifonia: várias vozes cantando melodias diferentes ao mesmo tempo.</p>
+  </div>
+ </div>
+</section>
+
+<!-- 10 -->
+<section class="slide">
+ <div class="inner">
+  <h2 class="abs a" style="left:72px;top:58px;white-space:nowrap">O nome “gótico” veio depois, e como insulto</h2>
+  <div class="abs a" style="left:72px;top:362px;width:430px">
+   <p class="big">século XVI</p>
+   <p class="small" style="font-size:18px;margin-top:8px;color:var(--muted)">Italianos como Giorgio Vasari chamaram a arte medieval de bárbara, coisa de godos.</p>
+  </div>
+  <div class="abs a" style="left:585px;top:362px;width:430px">
+   <p class="big">século XIX</p>
+   <p class="small" style="font-size:18px;margin-top:8px;color:var(--muted)">O gótico volta. Victor Hugo publica Notre-Dame de Paris em 1831, e Viollet-le-Duc restaura a catedral.</p>
+  </div>
+ </div>
+</section>
+
+<!-- 11 -->
+<section class="slide alt">
+ <div class="inner">
+  <h1 class="abs a" style="left:72px;top:190px;font-size:96px">Obrigado</h1>
+  <p class="abs a sub" style="left:72px;top:344px;width:540px;line-height:1.45;color:var(--muted)">Na próxima catedral gótica, olhe para cima, mas olhe também para o portal e para o vitral.</p>
+  <svg class="abs a" style="left:786px;top:146px" width="208" height="298" viewBox="0 0 208 298" fill="none">
+   <path d="M2 296V160C2 92 52 36 104 2C156 36 206 92 206 160V296" stroke="#e3a93a" stroke-width="2"/>
+   <path d="M22 296V170C22 108 62 62 104 36C146 62 186 108 186 170V296" stroke="#6b5530" stroke-width="2"/>
+  </svg>
+ </div>
+</section>
+
+<div id="ui"><div id="bar"></div></div>
+<div class="nav" id="left"><button id="prev" aria-label="Slide anterior">&#8592;</button></div>
+<div id="count"></div>
+<div class="nav" id="right"><button id="next" aria-label="Próximo slide">&#8594;</button></div>
+
+<script>
+const slides=[...document.querySelectorAll('.slide')];
+const prev=document.getElementById('prev'),next=document.getElementById('next');
+let cur=0;
+slides.forEach(s=>s.querySelectorAll('.a').forEach((el,i)=>el.style.setProperty('--i',i)));
+
+function show(n){
+  cur=Math.max(0,Math.min(slides.length-1,n));
+  slides.forEach((s,i)=>{
+    s.classList.toggle('active',i===cur);
+    s.classList.toggle('before',i<cur);
+  });
+  document.getElementById('count').textContent=(cur+1)+' / '+slides.length;
+  document.getElementById('bar').style.width=((cur+1)/slides.length*100)+'%';
+  prev.disabled=cur===0; next.disabled=cur===slides.length-1;
+  try{history.replaceState(null,'','#'+(cur+1))}catch(e){}
+}
+function fit(){
+  const s=Math.min(innerWidth/1080,innerHeight/600);
+  document.querySelectorAll('.inner').forEach(e=>e.style.setProperty('--s',s));
+}
+prev.onclick=()=>show(cur-1);
+next.onclick=()=>show(cur+1);
+addEventListener('keydown',e=>{
+  if(['ArrowRight','PageDown',' ','Enter'].includes(e.key)){e.preventDefault();show(cur+1)}
+  else if(['ArrowLeft','PageUp','Backspace'].includes(e.key)){e.preventDefault();show(cur-1)}
+  else if(e.key==='Home')show(0);
+  else if(e.key==='End')show(slides.length-1);
+  else if(e.key==='f'||e.key==='F'){document.fullscreenElement?document.exitFullscreen():document.documentElement.requestFullscreen()}
+});
+let x0=null;
+addEventListener('touchstart',e=>x0=e.touches[0].clientX,{passive:true});
+addEventListener('touchend',e=>{if(x0===null)return;const d=e.changedTouches[0].clientX-x0;
+  if(Math.abs(d)>50)show(cur+(d<0?1:-1));x0=null});
+let t;
+function wake(){document.body.classList.remove('idle');clearTimeout(t);t=setTimeout(()=>document.body.classList.add('idle'),3000)}
+addEventListener('mousemove',wake);addEventListener('keydown',wake);wake();
+addEventListener('resize',fit);
+fit();
+show((parseInt(location.hash.slice(1))||1)-1);
+</script>
+</body>
+</html>
