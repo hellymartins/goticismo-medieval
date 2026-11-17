@@ -1,1 +1,0 @@
-# goticismo-medieval
